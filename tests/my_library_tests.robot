@@ -11,7 +11,6 @@ Execute Java Logic
     Should Be Equal    ${result}    hello from java
 
 Execute Multiply Keyword
-    # Executing "Another Java Keyword"
     ${result}=    Multiply    ${5}    ${10}
     Should Be Equal As Integers    ${result}    50
 

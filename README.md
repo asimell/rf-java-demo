@@ -29,7 +29,7 @@ java -jar target/rf-java-demo-1.0.0.jar 8271
 ## Running Robot Framework Tests
 
 ```bash
-robot tests/my_library_tests.robot
+robot -d output tests/my_library_tests.robot
 ```
 
 ## Used Versions
