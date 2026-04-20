@@ -3,6 +3,9 @@
 Library    Remote    http://127.0.0.1:8270/    AS    RobotJavaLibrary
 
 *** Variables ***
+# A list where numbers divisible by 3 are replaced with "foo",
+# numbers divisible by 5 are replaced with "bar",
+# and numbers divisible by both 3 and 5 are replaced with "foobar".
 @{EXPECTED_FOOBAR}    1  2  foo  4  bar  foo  7  8  foo  bar  11  foo  13  14  foobar  16  17  foo  19  bar
 
 *** Test Cases ***
