@@ -14,12 +14,15 @@ Execute Multiply Keyword
     ${result}=    Multiply    ${5}    ${10}
     Should Be Equal As Integers    ${result}    50
 
-    ${result}=    Multiply    ${-3}    ${7}
+    ${result}=    Multiply    -3    7
     Should Be Equal As Integers    ${result}    -21
 
-    ${result}=    Multiply    ${0}    ${100}
+    ${result}=    Multiply    0    100
     Should Be Equal As Integers    ${result}    0
 
 Execute Foobar Keyword
     ${result}=    Generate Foobar   20
     Should Be Equal    ${result}    ${EXPECTED_FOOBAR}
+
+    # The actual error is java.lang.IllegalArgumentException
+    Run Keyword And Expect Error    *IllegalArgumentException*    Generate Foobar   -5
